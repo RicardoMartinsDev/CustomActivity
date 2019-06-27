@@ -19,7 +19,7 @@ define([
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-
+		alert('entrou no init da custom activity')
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 

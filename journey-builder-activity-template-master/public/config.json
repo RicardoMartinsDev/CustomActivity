@@ -17,11 +17,13 @@
         "execute": {
            "inArguments":[
 				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
+                    "emailAddress": "{{Contact.Attribute.Step_Ahead_MKT_Team.Email}}",
+					"nome": "{{Contact.Attribute.Step_Ahead_MKT_Team.Nome}}",
+					"apelido": "{{Contact.Attribute.Step_Ahead_MKT_Team.Apelido}}"
                 }									
 			],
-          "outArguments": [],
-          "url": "https://mc.s50.exacttarget.com//journeybuilder/execute",
+          "outArguments": [], 
+          "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
             "header": "",
@@ -33,22 +35,22 @@
     "configurationArguments": {
       "applicationExtensionKey": "__application_key_from_appcenter_here__",
       "save": {
-        "url": "https://mc.s50.exacttarget.com//journeybuilder/save",
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://mc.s50.exacttarget.com//journeybuilder/publish",
+        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://mc.s50.exacttarget.com//journeybuilder/stop",
+        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://mc.s50.exacttarget.com//journeybuilder/validate",
+        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
