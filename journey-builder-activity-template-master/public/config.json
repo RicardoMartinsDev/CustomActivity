@@ -40,17 +40,17 @@
         "useJwt": true
        },
        "publish": {
-        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/publish",
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/stop",
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/validate",
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
