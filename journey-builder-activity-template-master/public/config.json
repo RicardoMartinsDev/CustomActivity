@@ -35,22 +35,22 @@
     "configurationArguments": {
       "applicationExtensionKey": "52001f6c-d926-4c5d-b64e-b9973de1644a",
       "save": {
-        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/save",
+        "url": "https://customactivity-apiconnection.herokuapp.com/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/publish",
+        "url": "https://customactivity-apiconnection.herokuapp.com/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/stop",
+        "url": "https://customactivity-apiconnection.herokuapp.com/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://customactivity-apiconnection.herokuapp.com//journeybuilder/validate",
+        "url": "https://customactivity-apiconnection.herokuapp.com/validate",
         "verb": "POST",
         "useJwt": true
       }
