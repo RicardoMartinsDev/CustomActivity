@@ -45,7 +45,8 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-                alert(key);
+                alert(key + ' -> ' + val);
+				console.log(key + ' -> ' + val);
               
             });
         });
