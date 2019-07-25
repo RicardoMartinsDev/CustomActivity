@@ -22,7 +22,7 @@
                 }									
 			],
             "outArguments": [],
-            "url": "https://customactivity-apiconnection.herokuapp.com//execute"
+            "url": "https://customactivity-apiconnection.herokuapp.com/execute"
         }
     },
     "configurationArguments": {
