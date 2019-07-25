@@ -1,53 +1,69 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "images/icon_real.png",
-       "category": "message"
+        "icon": "images/icon_real.png",
+        "iconSmall": "images/icon_real.png",
+        "category": "message"
     },
     "type": "REST",
     "lang": {
-       "en-US": {
+        "en-US": {
           "name": "API Martins",
-          "description": "Chama API Sistema"
-		  }
+          "description": "Chama API Sistema",
+          "step1Label": "Configure Activity"
+        }
     },
-	
     "arguments": {
         "execute": {
-            "inArguments":[
+           "inArguments":[
 				{
                     "emailAddress": "{{Contact.Attribute.Step_Ahead_MKT_Team.Email}}",
 					"nome": "{{Contact.Attribute.Step_Ahead_MKT_Team.Nome}}",
 					"apelido": "{{Contact.Attribute.Step_Ahead_MKT_Team.Apelido}}"
                 }									
 			],
-            "outArguments": [],
-            "url": "https://customactivity-apiconnection.herokuapp.com/execute"
+          "outArguments": [], 
+          "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
+           "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": true,
+            "timeout": 10000
         }
     },
     "configurationArguments": {
-       "save": {
-           "url": "https://customactivity-apiconnection.herokuapp.com/save"
+      "applicationExtensionKey": "52001f6c-d926-4c5d-b64e-b9973de1644a",
+      "save": {
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/save",
+          "verb": "POST",
+        "useJwt": true
        },
        "publish": {
-           "url": "https://customactivity-apiconnection.herokuapp.com/publish"
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/publish",
+           "verb": "POST",
+        "useJwt": true
        },
-       "validate": {
-           "url": "https://customactivity-apiconnection.herokuapp.com/validate"
-       },
-       "stop": {
-           "url": "https://customactivity-apiconnection.herokuapp.com/stop"
-       }
+      "stop": {
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/stop",
+           "verb": "POST",
+        "useJwt": true
+      },
+      "validate": {
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/validate",
+        "verb": "POST",
+        "useJwt": true
+      }
     },
     "wizardSteps": [
-       { "label": "Step 1", "key": "step1" }
+        { "label": "Configure Activity", "key": "step1" }
     ],
     "userInterfaces": {
-       "configModal": {
-           "height": 400,
-           "width": 1000,
-           "fullscreen": false
-       }
+        "configModal": {
+            "height": 400,
+            "width": 1000,
+          "fullscreen": false
+        }
     },
     "schema": {
         "arguments": {
