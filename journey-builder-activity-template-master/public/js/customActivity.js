@@ -67,7 +67,7 @@ define([
     }
 
     function save() {
-        var postcardURLValue = $('#postcard-url').val();
+       /* var postcardURLValue = $('#postcard-url').val();
         var postcardTextValue = $('#postcard-text').val();
 
         payload['arguments'].execute.inArguments = [{
@@ -78,7 +78,7 @@ define([
         payload['metaData'].isConfigured = true;
 
         console.log(payload);
-        connection.trigger('updateActivity', payload);
+        connection.trigger('updateActivity', payload);*/
     }
 
 
