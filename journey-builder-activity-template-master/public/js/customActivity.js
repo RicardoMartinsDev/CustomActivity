@@ -58,6 +58,7 @@ define([
 				  const myJson = await response.json(); //extract JSON from the http response
 				  // do something with myJson
 				}
+				alert(' ALERTA REQUEST ' + userAction);
             });
         });
 
