@@ -47,7 +47,17 @@ define([
             $.each(inArgument, function (key, val) {
                 alert(key + ' -> ' + val);
 				console.log(key + ' -> ' + val);
-              
+				const userAction = async () => {
+				  const response = await fetch('https://postb.in/1564059922576-9645705102011', {
+					method: 'POST',
+					body: 'RESPOSTA DO JS', // string or object
+					headers: {
+					  'Content-Type': 'application/json'
+					}
+				  });
+				  const myJson = await response.json(); //extract JSON from the http response
+				  // do something with myJson
+				}
             });
         });
 
