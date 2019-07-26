@@ -30,6 +30,7 @@
 		"client_secret":"FXaTXByn5UyO7r1equQ8OwxU"
 		};
 		var $j = jQuery.noConflict();
+		var $a = jQuery.noConflict();
 		$j.support.cors = true;
 		$j.ajax({
 		type: "POST",
@@ -46,9 +47,9 @@
 		dataType: 'json',
 		success: function(responseData, status, xhr) {
 			console.log(responseData);
-			$.getJSON( responseData, function( data ) {
+			$a.getJSON( responseData, function( data ) {
 			  var items = [];
-			  $.each( data, function( key, val ) {
+			  $a.each( data, function( key, val ) {
 				alert(key + '->  ' + val);
 			  });
 			});
