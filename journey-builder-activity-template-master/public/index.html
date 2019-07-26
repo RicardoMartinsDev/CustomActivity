@@ -22,8 +22,32 @@
             require(config, dependencies);
         })();
 		var bodyText = {
-		"Name": "Testing Jquery with Rest"
-		};
+    "ContactKey": "NSFBLK6BD9A651B4EB94F4D10F5E1852EB86DFEBAE683C20190621",
+    "EventDefinitionKey":"APIEvent-9306fa8d-3bde-3eca-7845-8177900850a1",
+    "EstablishContactKey": true,
+    "Data": {
+    	"ID_MKTCLOUD": "NSFBLK6BDD9rA650B34EB934F4D10F5E1852EB86DFEBAE683C20190621",
+        "SFS_CLIENT_ID": "6BD9A650B4EB94F4D10F5E1852EB86DFEBAE683C", 
+               "MSG_CODE": "DNHGAME", 
+               "TELEMOVEL": "351916665769", 
+               "PAIS": "PT",
+                 "AUTH_TIMESTAMP" : "2019-06-21T01:22:00", 
+               "TRX_CODE" : "T.R1.Q", 
+               "TRX_TYPE" : "Compra", 
+               "MERCHANT_NAME" : "UBER TRIP HELP.UBER.CO", 
+               "ORG_AMOUNT" : "1.27", 
+               "ORG_CURRENCY" : "EUR", 
+               "SET_AMOUNT" : "1.27", 
+               "OTB_AMOUNT" : "0", 
+               "CL_STATUS" : "Payment Delay", 
+               "CARD_STATUS" : "0", 
+               "ATM_ENTITY" : "20601", 
+               "ATM_REFERENCE" : "294876718", 
+               "AUTH_ID" : "7072209460", 
+               "NOME" : "Nilza", 
+               "APELIDO" : "Costa"
+    }
+};
 		var $j = jQuery.noConflict();
 		$j.support.cors = true;
 		$j.ajax({
@@ -34,6 +58,7 @@
 			'Access-Control-Allow-Origin' : '*',
 			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
 			'Content-Type': 'application/json'
+			'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjEiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJYTzE0NEdHMFhnY0RhdkFJQlFKWEFrbUQiLCJjbGllbnRfaWQiOiJjZmx5MXltNnh4NnkzNGpicXcwaWR5cHEiLCJlaWQiOjUwMDAwODkzMCwic3RhY2tfa2V5IjoiUzUwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciJ9.znaGmVURwEtW67GoUfTI4gRrAvvPFYDEn4J0sYEQCEo.XasQCAK3cOsAPnCLER5HVNF_8GSbJABds3vclBCpObQI1d3ofnae9TOWyNutMi6ruuf2V4JQkziqslWH2tzaVgW8gjtAXtVb4fsxBFslsIBNMdopsuExuEKlPssgFhpXu3HV8K_ya1sSm3aHH4_dhALUOakCsaQkisr5myAJOsrg2UnpT7_'
 		},
 		crossDomain: true,
 		data: JSON.stringify(bodyText),
