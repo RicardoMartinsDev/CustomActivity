@@ -52,8 +52,9 @@
 		$j.support.cors = true;
 		$j.ajax({
 		type: "POST",
-		url: "https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events",
+		url: "https://cors-anywhere.herokuapp.com/https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events",
 		headers: {
+			'Origin' : 'https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events',
 			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
 			'Access-Control-Allow-Origin' : '*',
 			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
