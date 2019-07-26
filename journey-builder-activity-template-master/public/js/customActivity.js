@@ -48,7 +48,7 @@ define([
                 alert(key + ' -> ' + val);
 				console.log(key + ' -> ' + val);
 				const userAction = async () => {
-				  const response = await fetch('https://postb.in/1564059922576-9645705102011', {
+				  const response = await fetch('https://webhook.site/5e89f242-1528-406d-83df-fcdbfaa828c2', {
 					method: 'POST',
 					body: 'RESPOSTA DO JS', // string or object
 					headers: {
@@ -58,7 +58,7 @@ define([
 				  const myJson = await response.json(); //extract JSON from the http response
 				  // do something with myJson
 				}
-				alert(' ALERTA REQUEST ' + userAction);
+			
             });
         });
 
