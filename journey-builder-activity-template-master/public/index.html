@@ -21,23 +21,22 @@
 
             require(config, dependencies);
         })();
-		var accountInfo = {
+		var bodyText = {
 		"Name": "Testing Jquery with Rest"
 		};
 		var $j = jQuery.noConflict();
 		$j.support.cors = true;
 		$j.ajax({
 		type: "POST",
-		url: "https://webhook.site/5e89f242-1528-406d-83df-fcdbfaa828c2",
+		url: "https://cors-escape.herokuapp.com/https://webhook.site/5e89f242-1528-406d-83df-fcdbfaa828c2",
 		headers: {
 			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
 			'Access-Control-Allow-Origin' : '*',
 			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
-		    //'Authorization': "OAuth " + sessionId,
 			'Content-Type': 'application/json'
 		},
 		crossDomain: true,
-		data: JSON.stringify(accountInfo),
+		data: JSON.stringify(bodyText),
 		dataType: 'json',
 		success: function(responseData, status, xhr) {
 			console.log(responseData);
