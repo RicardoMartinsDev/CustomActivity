@@ -47,12 +47,14 @@
 		dataType: 'json',
 		success: function(responseData, status, xhr) {
 			console.log(responseData);
-			$a.getJSON( responseData, function( data ) {
+			var token = JSON.parse(responseData);
+			console.log(token.access_token);
+			/*$a.getJSON( responseData, function( data ) {
 			  var items = [];
 			  $a.each( data, function( key, val ) {
 				alert(key + '->  ' + val);
 			  });
-			});
+			});*/
 		},
 		error: function(request, status, error) {
 			console.log(request.responseText);
