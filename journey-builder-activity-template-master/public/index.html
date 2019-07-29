@@ -67,54 +67,52 @@
     "EventDefinitionKey":"APIEvent-9306fa8d-3bde-3eca-7845-8177900850a1",
     "EstablishContactKey": true,
     "Data": {
-	   "ID_MKTCLOUD": "NSFBLK6BDD9rA650B34EB934F4D10F5E1852EB86DFEBAE683C20190621",
-       "SFS_CLIENT_ID": "6BD9A650B4EB94F4D10F5E1852EB86DFEBAE683C", 
-	   "MSG_CODE": "DNHGAME", 
-	   "TELEMOVEL": "351916665769", 
-	   "PAIS": "PT",
-		 "AUTH_TIMESTAMP" : "2019-06-21T01:22:00", 
-	   "TRX_CODE" : "T.R1.Q", 
-	   "TRX_TYPE" : "Compra", 
-	   "MERCHANT_NAME" : "UBER TRIP HELP.UBER.CO", 
-	   "ORG_AMOUNT" : "1.27", 
-	   "ORG_CURRENCY" : "EUR", 
-	   "SET_AMOUNT" : "1.27", 
-	   "OTB_AMOUNT" : "0", 
-	   "CL_STATUS" : "Payment Delay", 
-	   "CARD_STATUS" : "0", 
-	   "ATM_ENTITY" : "20601", 
-	   "ATM_REFERENCE" : "294876718", 
-	   "AUTH_ID" : "7072209460", 
-	   "NOME" : "Nilza", 
-	   "APELIDO" : "Costa"
+    	"ID_MKTCLOUD": "NSFBLK6BDD9rA650B34EB934F4D10F5E1852EB86DFEBAE683C20190621",
+        "SFS_CLIENT_ID": "6BD9A650B4EB94F4D10F5E1852EB86DFEBAE683C", 
+               "MSG_CODE": "DNHGAME", 
+               "TELEMOVEL": "351916665769", 
+               "PAIS": "PT",
+                 "AUTH_TIMESTAMP" : "2019-06-21T01:22:00", 
+               "TRX_CODE" : "T.R1.Q", 
+               "TRX_TYPE" : "Compra", 
+               "MERCHANT_NAME" : "UBER TRIP HELP.UBER.CO", 
+               "ORG_AMOUNT" : "1.27", 
+               "ORG_CURRENCY" : "EUR", 
+               "SET_AMOUNT" : "1.27", 
+               "OTB_AMOUNT" : "0", 
+               "CL_STATUS" : "Payment Delay", 
+               "CARD_STATUS" : "0", 
+               "ATM_ENTITY" : "20601", 
+               "ATM_REFERENCE" : "294876718", 
+               "AUTH_ID" : "7072209460", 
+               "NOME" : "Nilza", 
+               "APELIDO" : "Costa"
     }
-	};
-	var $j = jQuery.noConflict();
-	$j.support.cors = true;
-	console.log('Token na segunda funçao -> ' + token.access_token);
-	$j.ajax({
-	type: "POST",
-	url: "https://cors-anywhere.herokuapp.com/https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events",
-	headers: {
-		'Origin' : 'https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events',
-		'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
-		'Access-Control-Allow-Origin' : '*',
-		'Access-Control-Allow-Methods' : 'GET, POST, PUT',
-		'Content-Type': 'application/json',
-		'Authorization' : 'Bearer ' + token.access_token
-	},
-	
-	data: JSON.stringify(bodyTextContact),
-	dataType: 'json',
-	success: function(responseData, status, xhr) {
-		console.log(responseData);
-	},
-	error: function(request, status, error) {
-		console.log(request.responseText);
-	}
-	});
+};
+		var $j = jQuery.noConflict();
+		$j.support.cors = true;
+		$j.ajax({
+		type: "POST",
+		url: "https://cors-anywhere.herokuapp.com/https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events",
+		headers: {
+			'Origin' : 'https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events',
+			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
+			'Access-Control-Allow-Origin' : '*',
+			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
+			'Content-Type': 'application/json',
+			'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjEiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJYN2xhRXR0VHFBUG5Fcm1TSTRnTFdhdXciLCJjbGllbnRfaWQiOiJjZmx5MXltNnh4NnkzNGpicXcwaWR5cHEiLCJlaWQiOjUwMDAwODkzMCwic3RhY2tfa2V5IjoiUzUwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciJ9.wAW0zX5CT_QtUHlU5VIc7NTiUDjBWMx54SvpiFYAcdE.gOdqfbQs-76rE-LJXsqYTqSwz1eV4tbZSVSpMOsFUbuAHZMZcyzUBHWP4aE8R6igM0lsbzsyA50RkDNggsrSpsEnSEE3ftt43MvhBgE0nQKsCf2imOJ_Thn2COP5dIGrvTrfFP5mabVu9JNwUPyc3PIxtHnNMA3fqPonQHb4f2dJNknGVYg'
+		},
+		crossDomain: true,
+		data: JSON.stringify(bodyTextContact),
+		dataType: 'json',
+		success: function(responseData, status, xhr) {
+			console.log(responseData);
+		},
+		error: function(request, status, error) {
+			console.log(request.responseText);
+		}
+		});
 		/*end of contact creation*/
-		
     </script>
 </head>
 
