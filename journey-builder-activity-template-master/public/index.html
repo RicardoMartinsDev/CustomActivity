@@ -49,12 +49,12 @@
 		success: function(responseData, status, xhr) {
 			console.log(responseData);
 			token = JSON.parse(JSON.stringify(responseData));
-			console.log(token.access_token);
 		},
 		error: function(request, status, error) {
 			console.log(request.responseText);
 		}
 		});
+		console.log(token.access_token);
 	//END OF TOKEN PARSE
 	
 	
