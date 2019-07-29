@@ -91,6 +91,7 @@
 	};
 	var $j = jQuery.noConflict();
 	$j.support.cors = true;
+	console.log('Token na segunda funçao -> ' + token.access_token);
 	$j.ajax({
 	type: "POST",
 	url: "https://cors-anywhere.herokuapp.com/https://mcdgsnqlh4ybg-9cyt895ypwkxh0.rest.marketingcloudapis.com/interaction/v1/events",
@@ -102,7 +103,7 @@
 		'Content-Type': 'application/json',
 		'Authorization' : 'Bearer ' + token.access_token
 	},
-	console.log('Token na segunda funçao -> ' + token.access_token),
+	
 	data: JSON.stringify(bodyTextContact),
 	dataType: 'json',
 	success: function(responseData, status, xhr) {
