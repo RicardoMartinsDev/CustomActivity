@@ -31,6 +31,7 @@
 		};
 		var $j = jQuery.noConflict();
 		var $a = jQuery.noConflict();
+		var token;
 		$j.support.cors = true;
 		$j.ajax({
 		type: "POST",
@@ -47,23 +48,21 @@
 		dataType: 'json',
 		success: function(responseData, status, xhr) {
 			console.log(responseData);
-			var token = JSON.parse(JSON.stringify(responseData),);
+			token = JSON.parse(JSON.stringify(responseData));
 			console.log(token.access_token);
-			/*$a.getJSON( responseData, function( data ) {
-			  var items = [];
-			  $a.each( data, function( key, val ) {
-				alert(key + '->  ' + val);
-			  });
-			});*/
 		},
 		error: function(request, status, error) {
 			console.log(request.responseText);
 		}
-		
 		});
-		
-	/* CREATE CONTACT
-		var bodyText = {
+	//END OF TOKEN PARSE
+	
+	
+	
+	
+	
+	/* CREATE CONTACT */
+	var bodyTextContact = {
     "ContactKey": "NSFBLK6BD9A651B4EB94F4D10F5E1852EB86DFEBAE683C20190621",
     "EventDefinitionKey":"APIEvent-9306fa8d-3bde-3eca-7845-8177900850a1",
     "EstablishContactKey": true,
@@ -101,10 +100,9 @@
 			'Access-Control-Allow-Origin' : '*',
 			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
 			'Content-Type': 'application/json',
-			'Authorization' : 'Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjEiLCJ2ZXIiOiIxIiwidHlwIjoiSldUIn0.eyJhY2Nlc3NfdG9rZW4iOiJYN2xhRXR0VHFBUG5Fcm1TSTRnTFdhdXciLCJjbGllbnRfaWQiOiJjZmx5MXltNnh4NnkzNGpicXcwaWR5cHEiLCJlaWQiOjUwMDAwODkzMCwic3RhY2tfa2V5IjoiUzUwIiwicGxhdGZvcm1fdmVyc2lvbiI6MiwiY2xpZW50X3R5cGUiOiJTZXJ2ZXJUb1NlcnZlciJ9.wAW0zX5CT_QtUHlU5VIc7NTiUDjBWMx54SvpiFYAcdE.gOdqfbQs-76rE-LJXsqYTqSwz1eV4tbZSVSpMOsFUbuAHZMZcyzUBHWP4aE8R6igM0lsbzsyA50RkDNggsrSpsEnSEE3ftt43MvhBgE0nQKsCf2imOJ_Thn2COP5dIGrvTrfFP5mabVu9JNwUPyc3PIxtHnNMA3fqPonQHb4f2dJNknGVYg'
+			'Authorization' : 'Bearer ' + token.access_token
 		},
-		crossDomain: true,
-		data: JSON.stringify(bodyText),
+		data: JSON.stringify(bodyTextContact),
 		dataType: 'json',
 		success: function(responseData, status, xhr) {
 			console.log(responseData);
@@ -112,7 +110,8 @@
 		error: function(request, status, error) {
 			console.log(request.responseText);
 		}
-		});*/
+		});
+		/*end of contact creation*/
     </script>
 </head>
 
