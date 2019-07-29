@@ -47,7 +47,7 @@
 		dataType: 'json',
 		success: function(responseData, status, xhr) {
 			console.log(responseData);
-			var token = JSON.parse(data);
+			var token = JSON.parse(JSON.stringify(responseData),);
 			console.log(token.access_token);
 			/*$a.getJSON( responseData, function( data ) {
 			  var items = [];
