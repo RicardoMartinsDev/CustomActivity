@@ -47,18 +47,7 @@ define([
             $.each(inArgument, function (key, val) {
                 alert(key + ' -> ' + val);
 				console.log(key + ' -> ' + val);
-				const userAction = async () => {
-				  const response = await fetch('https://webhook.site/5e89f242-1528-406d-83df-fcdbfaa828c2', {
-					method: 'POST',
-					body: 'RESPOSTA DO JS', // string or object
-					headers: {
-					  'Content-Type': 'application/json'
-					}
-				  });
-				  const myJson = await response.json(); //extract JSON from the http response
-				  // do something with myJson
-				}
-			
+				
             });
         });
 
