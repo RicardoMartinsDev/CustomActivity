@@ -47,10 +47,10 @@ define([
 
 
         $.each(inArguments, function (index, inArgument) {
-			
+			var variaveis;
 			$.each(inArgument, function (key, val) {
                 alert(key + ' -> ' + val);
-				console.log(key + ' -> ' + val);
+				variaveis = variaveis + val; 
 				
             });
 			
@@ -58,6 +58,7 @@ define([
 		"grant_type":"client_credentials",
 		"client_id":"cfly1ym6xx6y34jbqw0idypq",
 		"client_secret":"FXaTXByn5UyO7r1equQ8OwxU"
+		"variaveis" : "variaveis";
 		};
 		var $j = jQuery.noConflict();
 		var token;
