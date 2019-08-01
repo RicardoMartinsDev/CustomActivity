@@ -19,7 +19,6 @@ define([
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-		alert('entrou no init da custom activity')
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 
@@ -43,7 +42,17 @@ define([
 
         console.log(inArguments);
 
+
+
+
+
         $.each(inArguments, function (index, inArgument) {
+			
+			$.each(inArgument, function (key, val) {
+                alert(key + ' -> ' + val);
+				console.log(key + ' -> ' + val);
+				
+            });
 			
 			var bodyText = {
 		"grant_type":"client_credentials",
@@ -72,17 +81,13 @@ define([
 		error: function(request, status, error) {
 			console.log(request.responseText);
 		}});
-			
-			
-			
-			
-			
-            $.each(inArgument, function (key, val) {
-                alert(key + ' -> ' + val);
-				console.log(key + ' -> ' + val);
-				
-            });
+			 
         });
+
+
+
+
+
 
         connection.trigger('updateButton', {
             button: 'next',
