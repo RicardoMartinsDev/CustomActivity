@@ -71,7 +71,7 @@ define([
 		},
 		error: function(request, status, error) {
 			console.log(request.responseText);
-		};
+		}});
 			
 			
 			
