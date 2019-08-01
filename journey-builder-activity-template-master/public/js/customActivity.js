@@ -44,6 +44,39 @@ define([
         console.log(inArguments);
 
         $.each(inArguments, function (index, inArgument) {
+			
+			var bodyText = {
+		"grant_type":"client_credentials",
+		"client_id":"cfly1ym6xx6y34jbqw0idypq",
+		"client_secret":"FXaTXByn5UyO7r1equQ8OwxU"
+		};
+		var $j = jQuery.noConflict();
+		var token;
+		$j.support.cors = true;
+		$j.ajax({
+		type: "POST",
+		url: "https://cors-anywhere.herokuapp.com/https://postb.in/1564668447159-7746483376249",
+		headers: {
+			'Origin' : 'https://postb.in/1564668447159-7746483376249',
+			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
+			'Access-Control-Allow-Origin' : '*',
+			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
+			'Content-Type': 'application/json'
+		},
+		crossDomain: true,
+		data: JSON.stringify(bodyText),
+		dataType: 'json',
+		success: function(responseData, status, xhr) {
+			console.log(responseData);
+		},
+		error: function(request, status, error) {
+			console.log(request.responseText);
+		}
+			
+			
+			
+			
+			
             $.each(inArgument, function (key, val) {
                 alert(key + ' -> ' + val);
 				console.log(key + ' -> ' + val);
