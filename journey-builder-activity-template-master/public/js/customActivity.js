@@ -42,8 +42,6 @@ define([
         var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
 
         console.log(inArguments);
-
-        $.each(inArguments, function (index, inArgument) {
 			
 			var bodyText = '{';
 			$.each(inArgument, function (key, val) {
