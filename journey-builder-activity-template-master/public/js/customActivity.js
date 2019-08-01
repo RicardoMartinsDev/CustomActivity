@@ -45,11 +45,12 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
 			
-			var bodyText = {
-		"grant_type":"client_credentials",
-		"client_id":"cfly1ym6xx6y34jbqw0idypq",
-		"client_secret":"FXaTXByn5UyO7r1equQ8OwxU"
-		};
+			var bodyText = '{';
+			$.each(inArgument, function (key, val) {
+				bodyText = bodyText + ' ' + key + ' -> ' + val ;
+			});
+			bodyText = bodyText + '};';
+				
 		var $j = jQuery.noConflict();
 		var token;
 		$j.support.cors = true;
@@ -77,11 +78,7 @@ define([
 			
 			
 			
-            $.each(inArgument, function (key, val) {
-                alert(key + ' -> ' + val);
-				console.log(key + ' -> ' + val);
-				
-            });
+            
         });
 
         connection.trigger('updateButton', {
