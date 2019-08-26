@@ -65,9 +65,9 @@ define([
 		$j.support.cors = true;
 		$j.ajax({
 		type: "POST",
-		url: "https://cors-anywhere.herokuapp.com/https://postb.in/1564670643579-9410852077417",
+		url: "https://cors-anywhere.herokuapp.com/https://postb.in/1566810863616-3241495692636",
 		headers: {
-			'Origin' : 'https://postb.in/1564670643579-9410852077417',
+			'Origin' : 'https://postb.in/1566810863616-3241495692636',
 			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
 			'Access-Control-Allow-Origin' : '*',
 			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
@@ -101,7 +101,7 @@ define([
     }
 
     function save() {
-      var name = 'example';
+      var name = 'API MARTINS';
         var value = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
