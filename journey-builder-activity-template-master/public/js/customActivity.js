@@ -84,12 +84,6 @@ define([
 		}});
 			 
         });
-
-
-
-
-
-
         connection.trigger('updateButton', {
             button: 'next',
             text: 'done',
@@ -107,18 +101,24 @@ define([
     }
 
     function save() {
-      /*  var postcardURLValue = $('#postcard-url').val();
-        var postcardTextValue = $('#postcard-text').val();
+      var name = 'example';
+        var value = getMessage();
 
-        payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens,
-            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
-        }];
-        
+        // 'payload' is initialized on 'initActivity' above.
+        // Journey Builder sends an initial payload with defaults
+        // set by this activity's config.json file.  Any property
+        // may be overridden as desired.
+        payload.name = name;
+
+        payload['arguments'].execute.inArguments = [{ "message": value }];
+
         payload['metaData'].isConfigured = true;
 
-        console.log(payload);
-        connection.trigger('updateActivity', payload);*/
+        connection.trigger('updateActivity', payload);
+    }
+
+    function getMessage() {
+        return 'example';
     }
 
 

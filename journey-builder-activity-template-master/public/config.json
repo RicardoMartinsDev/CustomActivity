@@ -9,8 +9,7 @@
     "lang": {
         "en-US": {
           "name": "API Martins",
-          "description": "Chama API Sistema",
-          "step1Label": "Configure Activity"
+          "description": "Chama API Sistema"
         }
     },
     "arguments": {
@@ -22,14 +21,12 @@
 					"apelido": "{{Contact.Attribute.Step_Ahead_MKT_Team.Apelido}}"
                 }									
 			],
-          "outArguments": [], 
-          "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
-           "verb": "POST",
-            "body": "",
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
+          "outArguments": [
+		  {
+		   "foundSignupDate": ""
+		  }
+		  ], 
+          "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute"
         }
     },
     "configurationArguments": {
