@@ -22,11 +22,7 @@
 					"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
                 }									
 			],
-          "outArguments": [
-		  {
-		   "foundSignupDate": ""
-		  }
-		  ], 
+          "outArguments": [], 
           "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute"
         }
     },
@@ -82,15 +78,7 @@
                         }
                     }
                 ],
-                "outArguments": [
-                    {
-                        "foundSignupDate": {
-                            "dataType": "Date",
-                            "direction": "out",
-                            "access": "visible"
-                        }
-                    }
-                ]
+                "outArguments": []
             }
         }
     }
