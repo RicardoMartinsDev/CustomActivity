@@ -16,9 +16,9 @@
         "execute": {
            "inArguments":[
 				{
-                    "emailAddress": "{{Contact.Attribute.Step_Ahead_MKT_Team.Email}}",
-					"nome": "{{Contact.Attribute.Step_Ahead_MKT_Team.Nome}}",
-					"apelido": "{{Contact.Attribute.Step_Ahead_MKT_Team.Apelido}}"
+                    "emailAddress": "{{Contact.Attribute.Hands_On.Email}}",
+					"nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
+					"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
                 }									
 			],
           "outArguments": [
