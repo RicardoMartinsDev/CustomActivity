@@ -65,9 +65,9 @@ define([
 		$j.support.cors = true;
 		$j.ajax({
 		type: "POST",
-		url: "https://cors-anywhere.herokuapp.com/https://postb.in/1566836798864-0883605079725",
+		url: "https://cors-anywhere.herokuapp.com/https://postb.in/1566839634549-4573038015514",
 		headers: {
-			'Origin' : 'https://postb.in/1566836798864-0883605079725',
+			'Origin' : 'https://postb.in/1566839634549-4573038015514',
 			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
 			'Access-Control-Allow-Origin' : '*',
 			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
