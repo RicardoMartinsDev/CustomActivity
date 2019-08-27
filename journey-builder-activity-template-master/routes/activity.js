@@ -119,7 +119,6 @@ exports.execute = function (req, res) {
 			error: function(request, status, error) {
 				console.log(request.responseText);
 			}});
-			}});
 			
 		
 			
