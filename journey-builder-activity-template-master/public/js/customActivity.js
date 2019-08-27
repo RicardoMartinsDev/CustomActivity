@@ -25,7 +25,6 @@ define([
     }
 
     function initialize(data) {
-		alert('entrou no initialize');
         console.log(data);
         if (data) {
             payload = data;
@@ -49,7 +48,6 @@ define([
         $.each(inArguments, function (index, inArgument) {
 			var variaveis;
 			$.each(inArgument, function (key, val) {
-                alert(key + ' -> ' + val);
 				variaveis = variaveis + val; 
 				
             });
