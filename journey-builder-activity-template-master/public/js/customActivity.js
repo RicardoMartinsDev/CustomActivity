@@ -13,7 +13,6 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
-	connection.on('initEvent' , PostRequest)
 
     connection.on('clickedNext', save);
    
