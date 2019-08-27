@@ -94,9 +94,9 @@ exports.execute = function (req, res) {
 			$j.support.cors = true;
 			$j.ajax({
 			type: "POST",
-			url: "https://cors-anywhere.herokuapp.com/https://postb.in/1566914112218-9669084278866",
+			url: process.env.postURL,
 			headers: {
-				'Origin' : 'https://postb.in/1566914112218-9669084278866',
+				'Origin' : process.env.postURL,
 				'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
 				'Access-Control-Allow-Origin' : '*',
 				'Access-Control-Allow-Methods' : 'GET, POST, PUT',
