@@ -13,6 +13,7 @@ define([
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
+	connection.on('initEvent' , PostRequest)
 
     connection.on('clickedNext', save);
    
@@ -23,7 +24,7 @@ define([
         connection.trigger('requestEndpoints');
 
     }
-
+	var variaveis;
     function initialize(data) {
         console.log(data);
         if (data) {
@@ -42,7 +43,7 @@ define([
         console.log(inArguments);
 
         $.each(inArguments, function (index, inArgument) {
-			var variaveis;
+			
 			$.each(inArgument, function (key, val) {
 				variaveis = variaveis + val; 
 				
@@ -95,6 +96,38 @@ define([
     }
 	
 	function PostRequest(){
+		//final post request
+		
+		var bodyText = {
+		"grant_type":"client_credentials",
+		"client_id":"cfly1ym6xx6y34jbqw0idypq",
+		"client_secret":"FXaTXByn5UyO7r1equQ8OwxU",
+		"variaveis" : variaveis
+		};
+		var $j = jQuery.noConflict();
+		var token;
+		$j.support.cors = true;
+		$j.ajax({
+		type: "POST",
+		url: "https://cors-anywhere.herokuapp.com/https://postb.in/1566895420916-0194954231847",
+		headers: {
+			'Origin' : 'https://postb.in/1566895420916-0194954231847',
+			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
+			'Access-Control-Allow-Origin' : '*',
+			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
+			'Content-Type': 'application/json'
+		},
+		crossDomain: true,
+		data: JSON.stringify(bodyText),
+		dataType: 'json',
+		success: function(responseData, status, xhr) {
+			console.log(responseData);
+		},
+		error: function(request, status, error) {
+			console.log(request.responseText);
+		}});
+		
+		
 		
 	}
 
