@@ -120,7 +120,7 @@ exports.execute = function (req, res) {
             
 			
 			
-			/*	var bodyText = {
+				var bodyText = {
 			"grant_type":"client_credentials",
 			"client_id":"cfly1ym6xx6y34jbqw0idypq",
 			"client_secret":"FXaTXByn5UyO7r1equQ8OwxU",
@@ -147,8 +147,8 @@ exports.execute = function (req, res) {
 			},
 			error: function(request, status, error) {
 				console.log(request.responseText);
-			}});*/
-			}});*/
+			}});
+			}});
 			
 		
 			
