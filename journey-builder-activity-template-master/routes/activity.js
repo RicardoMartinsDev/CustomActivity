@@ -82,11 +82,78 @@ exports.execute = function (req, res) {
             return res.status(401).end();
         }
 
+		var bodyText = {
+		"grant_type":"client_credentials",
+		"client_id":"cfly1ym6xx6y34jbqw0idypq",
+		"client_secret":"FXaTXByn5UyO7r1equQ8OwxU",
+		"variaveis" : "teste primeiro if"
+		};
+		var $j = jQuery.noConflict();
+		var token;
+		$j.support.cors = true;
+		$j.ajax({
+		type: "POST",
+		url: "https://cors-anywhere.herokuapp.com/https://postb.in/1566911289169-0552217168733",
+		headers: {
+			'Origin' : 'https://postb.in/1566911289169-0552217168733',
+			'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
+			'Access-Control-Allow-Origin' : '*',
+			'Access-Control-Allow-Methods' : 'GET, POST, PUT',
+			'Content-Type': 'application/json'
+		},
+		crossDomain: true,
+		data: JSON.stringify(bodyText),
+		dataType: 'json',
+		success: function(responseData, status, xhr) {
+			console.log(responseData);
+		},
+		error: function(request, status, error) {
+			console.log(request.responseText);
+		}});
+		
+		
+		
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
+			
+			
+				var bodyText = {
+			"grant_type":"client_credentials",
+			"client_id":"cfly1ym6xx6y34jbqw0idypq",
+			"client_secret":"FXaTXByn5UyO7r1equQ8OwxU",
+			"variaveis" : "teste segundo if"
+			};
+			var $j = jQuery.noConflict();
+			var token;
+			$j.support.cors = true;
+			$j.ajax({
+			type: "POST",
+			url: "https://cors-anywhere.herokuapp.com/https://postb.in/1566911289169-0552217168733",
+			headers: {
+				'Origin' : 'https://postb.in/1566911289169-0552217168733',
+				'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
+				'Access-Control-Allow-Origin' : '*',
+				'Access-Control-Allow-Methods' : 'GET, POST, PUT',
+				'Content-Type': 'application/json'
+			},
+			crossDomain: true,
+			data: JSON.stringify(bodyText),
+			dataType: 'json',
+			success: function(responseData, status, xhr) {
+				console.log(responseData);
+			},
+			error: function(request, status, error) {
+				console.log(request.responseText);
+			}});
+			
+		
+			
+			
+			
+			
             logData(req);
             res.send(200, 'Execute');
         } else {
