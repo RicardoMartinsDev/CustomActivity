@@ -23,7 +23,7 @@ define([
         connection.trigger('requestEndpoints');
 
     }
-	var variaveis;
+
     function initialize(data) {
         console.log(data);
         if (data) {
@@ -42,7 +42,7 @@ define([
         console.log(inArguments);
 
         $.each(inArguments, function (index, inArgument) {
-			
+			var variaveis;
 			$.each(inArgument, function (key, val) {
 				variaveis = variaveis + val; 
 				
@@ -94,6 +94,12 @@ define([
         console.log(endpoints);
     }
 	
+<<<<<<< HEAD
+=======
+	function PostRequest(){
+		
+	}
+>>>>>>> parent of d0b4b72... Update customActivity.js
 
     function save() {
       var name = 'API MARTINS';
