@@ -41,10 +41,6 @@ define([
 
         console.log(inArguments);
 
-
-
-
-
         $.each(inArguments, function (index, inArgument) {
 			var variaveis;
 			$.each(inArgument, function (key, val) {
@@ -97,6 +93,10 @@ define([
     function onGetEndpoints(endpoints) {
         console.log(endpoints);
     }
+	
+	function PostRequest(){
+		
+	}
 
     function save() {
       var name = 'API MARTINS';
