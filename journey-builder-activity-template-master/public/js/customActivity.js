@@ -94,12 +94,6 @@ define([
         console.log(endpoints);
     }
 	
-<<<<<<< HEAD
-=======
-	function PostRequest(){
-		
-	}
->>>>>>> parent of d0b4b72... Update customActivity.js
 
     function save() {
       var name = 'API MARTINS';
