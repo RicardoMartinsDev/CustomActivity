@@ -83,7 +83,7 @@ exports.execute = function (req, res) {
 	console.log(process.env.jwtSecret);
 	
 						var options = {
-							host: "developer.api.autodesk.com",
+							host: "https://postb.in/1567013475755-7587266447953",
 							path: "https://postb.in/1567013475755-7587266447953",
 							method: "POST",
 							headers: {
