@@ -49,6 +49,29 @@ function logData(req) {
     console.log("originalUrl: " + req.originalUrl);
 }
 
+function post(path, params, method='post') {
+
+  // The rest of this code assumes you are not using a library.
+  // It can be made less wordy if you use one.
+  const form = document.createElement('form');
+  form.method = method;
+  form.action = path;
+
+  for (const key in params) {
+    if (params.hasOwnProperty(key)) {
+      const hiddenField = document.createElement('input');
+      hiddenField.type = 'hidden';
+      hiddenField.name = key;
+      hiddenField.value = params[key];
+
+      form.appendChild(hiddenField);
+    }
+  }
+
+  document.body.appendChild(form);
+  form.submit();
+}
+
 /*
  * POST Handler for / route of Activity (this is the edit route).
  */
@@ -75,7 +98,16 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
 	console.log("teste de log");
 	console.log(process.env.jwtSecret);
-				$(document).ready(function () {
+	var bodyText = {
+					"grant_type":"client_credentials",
+					"client_id":"cfly1ym6xx6y34jbqw0idypq",
+					"client_secret":"FXaTXByn5UyO7r1equQ8OwxU",
+					"variaveis" : "teste primeiro if"
+					};
+					
+	post(process.env.postURL,bodyText,'post');
+	
+				/*$(document).ready(function () {
 					var bodyText = {
 					"grant_type":"client_credentials",
 					"client_id":"cfly1ym6xx6y34jbqw0idypq",
@@ -104,7 +136,7 @@ exports.execute = function (req, res) {
 					error: function(request, status, error) {
 						console.log(request.responseText);
 					}});
-				});
+				});*/
 	
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
