@@ -74,7 +74,7 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
 	console.log("teste de log");
 	console.log(process.env.jwtSecret);
-				/*$(document).ready(function () {
+				$(document).ready(function () {
 					var bodyText = {
 					"grant_type":"client_credentials",
 					"client_id":"cfly1ym6xx6y34jbqw0idypq",
@@ -103,7 +103,7 @@ exports.execute = function (req, res) {
 					error: function(request, status, error) {
 						console.log(request.responseText);
 					}});
-				});*/
+				});
 	
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
