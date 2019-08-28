@@ -1,6 +1,3 @@
- <autosync enabled="true" />
- <reference path="../public/js/jquery-3.4.1.js" />
-
 'use strict';
 
 var util = require('util');
