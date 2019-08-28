@@ -86,7 +86,6 @@ define([
     }
 
     function onGetTokens(tokens) {
-		console.log("entrou nos tokens");
         console.log(tokens);
         authTokens = tokens;
     }
