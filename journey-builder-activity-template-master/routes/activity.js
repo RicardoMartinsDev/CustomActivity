@@ -12,7 +12,7 @@ var http = require('https');
 
 exports.logExecuteData = [];
 
-function logData(req) {
+function logData(req) { 
     exports.logExecuteData.push({
         body: req.body,
         headers: req.headers,
