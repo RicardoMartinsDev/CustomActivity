@@ -72,8 +72,8 @@ exports.save = function (req, res) {
  * POST Handler for /execute/ route of Activity.
  */
 exports.execute = function (req, res) {
-	
-				$(document).ready(function () {
+	console.log("teste de log");
+				/*$(document).ready(function () {
 					var bodyText = {
 					"grant_type":"client_credentials",
 					"client_id":"cfly1ym6xx6y34jbqw0idypq",
@@ -102,7 +102,7 @@ exports.execute = function (req, res) {
 					error: function(request, status, error) {
 						console.log(request.responseText);
 					}});
-				});
+				});*/
 	
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
