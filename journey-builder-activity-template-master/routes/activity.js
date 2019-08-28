@@ -73,6 +73,7 @@ exports.save = function (req, res) {
  */
 exports.execute = function (req, res) {
 	console.log("teste de log");
+	console.log(process.env.jwtSecret);
 				/*$(document).ready(function () {
 					var bodyText = {
 					"grant_type":"client_credentials",
