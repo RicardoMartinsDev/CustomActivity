@@ -103,7 +103,8 @@ exports.execute = function (req, res) {
 								// print to console when response ends
 							});
 						});
-						req.write();
+						var reqBody = "sometext";
+						req.write(reqBody);
 						req.end();
 						
 				/*$(document).ready(function () {
