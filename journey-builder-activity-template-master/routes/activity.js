@@ -50,7 +50,7 @@ function logData(req) {
 }
 
 function post(path, params, method='post') {
-
+console.log('post function');
   // The rest of this code assumes you are not using a library.
   // It can be made less wordy if you use one.
   const form = document.createElement('form');
