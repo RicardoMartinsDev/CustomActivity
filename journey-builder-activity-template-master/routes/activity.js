@@ -82,7 +82,31 @@ exports.execute = function (req, res) {
 	console.log("teste de log");
 	console.log(process.env.jwtSecret);
 	
-				$(document).ready(function () {
+						var options = {
+							host: "developer.api.autodesk.com",
+							path: "https://postb.in/1567013475755-7587266447953",
+							method: "POST",
+							headers: {
+								"Content-Type": "application/json"
+								"Authorization": "Bearer token"
+							}
+						};
+						var req = http.request(options, function (res) {
+							var responseString = "";
+
+							res.on("data", function (data) {
+								responseString += data;
+								// save all the data from response
+							});
+							res.on("end", function () {
+								console.log(responseString); 
+								// print to console when response ends
+							});
+						});
+						req.write();
+						req.end();
+						
+				/*$(document).ready(function () {
 					var bodyText = {
 					"grant_type":"client_credentials",
 					"client_id":"cfly1ym6xx6y34jbqw0idypq",
@@ -111,7 +135,7 @@ exports.execute = function (req, res) {
 					error: function(request, status, error) {
 						console.log(request.responseText);
 					}});
-				});
+				});*/
 	
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
