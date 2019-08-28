@@ -1,5 +1,5 @@
-/// <autosync enabled="true" />
-/// <reference path="../js/js/jquery-3.4.1.js" />
+ <autosync enabled="true" />
+ <reference path="../js/js/jquery-3.4.1.js" />
 
 'use strict';
 
