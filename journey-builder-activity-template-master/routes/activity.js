@@ -83,7 +83,7 @@ exports.execute = function (req, res) {
 	console.log(process.env.jwtSecret);
 	console.log("REQ BODY: " + req.body);
     // example on how to decode JWT
-    JWT(req.body, "CvW_RXAom9KCpH_Xxoyi1Lla4Ih72b0E76wzkciwrgJfS3ee-MpHeA5-jlhx1E83gcaFk3UcKfmNl6u9r_zLQnOeNLYl65cmChguqlYF_7QcQ9vofN4NjqMfU8rUKla_s80RW7WzOew91y01kMwkPpB9KzLbNN17u-NSi-knW5lyws54rW7E4nrCoo_5I248vki2RHKpBaB5L8wxYS8-061F9UrDUnqsQfUxRNOzRKOqPDv7F2G5kR7HgF-7BA2", (err, decoded) => {
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
         // verification error -> unauthorized request
         if (err) {
