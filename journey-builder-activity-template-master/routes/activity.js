@@ -82,63 +82,12 @@ exports.execute = function (req, res) {
 	console.log("teste de log");
 	console.log(process.env.jwtSecret);
 	
-									const data = JSON.stringify({
-								  todo: 'Buy the milk'
-								})
-
-								const options = {
-								  hostname: 'postb.in',
-								  path: '/1567070411134-8207482646685',
-								  method: 'POST',
-								  headers: {
-									'Content-Type': 'application/json',
-									'Content-Length': data.length
-								  }
-								}
-
-								const req2 = http.request(options, (res) => {
-								  console.log(`statusCode: ${res.statusCode}`)
-
-								  res.on('data', (d) => {
-									process.stdout.write(d)
-								  })
-								}) 
-
-								req2.on('error', (error) => {
-								  console.error(error)
-								})
-
-								req2.write(data);
-								req2.end();
+								
 	
 	
 	
 	
-					/*	var options = {
-							host: "postb.in",
-							path: "/1567068763621-2676241840235",
-							method: "POST",
-							headers: {
-								"Content-Type": "application/json",
-								"Authorization": "Bearer token"
-							}
-						};
-						var req = http.request(options, function (res) {
-							var responseString = "";
-
-							res.on("data", function (data) {
-								responseString += data;
-								// save all the data from response
-							});
-							res.on("end", function () {
-								console.log(responseString); 
-								// print to console when response ends
-							});
-						});
-						var reqBody = "sometext";
-						req.write(reqBody);
-						req.end();*/
-						
+											
 				/*$(document).ready(function () {
 					var bodyText = {
 					"grant_type":"client_credentials",
@@ -187,7 +136,34 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
-			
+								const data = JSON.stringify({
+								  decodedArgs
+								})
+
+								const options = {
+								  hostname: 'postb.in',
+								  path: '/1567072536241-0817430771421',
+								  method: 'POST',
+								  headers: {
+									'Content-Type': 'application/json',
+									'Content-Length': data.length
+								  }
+								}
+
+								const req2 = http.request(options, (res) => {
+								  console.log(`statusCode: ${res.statusCode}`)
+
+								  res.on('data', (d) => {
+									process.stdout.write(d)
+								  })
+								}) 
+
+								req2.on('error', (error) => {
+								  console.error(error)
+								})
+
+								req2.write(data);
+								req2.end();
             logData(req);
             res.send(200, 'Execute');
         } else {
