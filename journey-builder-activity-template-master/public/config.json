@@ -22,7 +22,13 @@
 					"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
                 }									
 			],
-          "outArguments": [], 
+          "outArguments": [
+				{
+                    "emailAddress": "{{Contact.Attribute.Hands_On.Email}}",
+					"nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
+					"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
+                }
+		  ], 
           "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute"
         }
     },
