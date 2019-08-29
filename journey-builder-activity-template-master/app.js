@@ -2,6 +2,7 @@
 // Module Dependencies
 // -------------------
 var express     = require('express');
+var override     = require('method-override');
 var bodyParser  = require('body-parser');
 var errorhandler = require('errorhandler');
 var http        = require('http');
@@ -17,7 +18,7 @@ app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.raw({type: 'application/jwt'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.methodOverride());
+app.use(override);
 app.use(express.favicon());
 
 app.use(express.static(path.join(__dirname, 'public')));
