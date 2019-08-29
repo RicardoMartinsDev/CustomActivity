@@ -3,6 +3,7 @@
 // -------------------
 var express     = require('express');
 var override     = require('method-override');
+var favicon     = require('favicon');
 var bodyParser  = require('body-parser');
 var errorhandler = require('errorhandler');
 var http        = require('http');
@@ -19,7 +20,7 @@ app.use(bodyParser.raw({type: 'application/jwt'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(override);
-app.use(express.favicon());
+app.use(favicon);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
