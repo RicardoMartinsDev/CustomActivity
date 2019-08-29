@@ -123,11 +123,11 @@ exports.execute = function (req, res) {
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
-        // verification error -> unauthorized request
+        /*verification error -> unauthorized request
         if (err) {
             console.error('ERRO AQUI MANO: ' + err);
             return res.status(401).end();
-        }
+        }*/
 		
 		
 		
