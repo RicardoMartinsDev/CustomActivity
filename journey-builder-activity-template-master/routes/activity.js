@@ -124,7 +124,7 @@ exports.execute = function (req, res) {
 
         // verification error -> unauthorized request
         if (err) {
-            console.error(err);
+            console.error('ERRO AQUI MANO: ' + err);
             return res.status(401).end();
         }
 		
