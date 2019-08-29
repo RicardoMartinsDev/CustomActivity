@@ -121,8 +121,7 @@ exports.execute = function (req, res) {
 				});*/
 	
     // example on how to decode JWT
-	var token = jwt.sign(process.env.jwtSecret, 'shhhhh');
-    JWT(req.body, token, (err, decoded) => {
+    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
         // verification error -> unauthorized request
         if (err) {
@@ -134,7 +133,7 @@ exports.execute = function (req, res) {
 		
 			
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
-            
+            console.log("entrou no if dos argumentos");
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
