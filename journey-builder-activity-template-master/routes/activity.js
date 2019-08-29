@@ -13,6 +13,7 @@ const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var util = require('util');
 var http = require('https');
+var jwt = require('jsonwebtoken');
 
 exports.logExecuteData = [];
 
@@ -120,7 +121,8 @@ exports.execute = function (req, res) {
 				});*/
 	
     // example on how to decode JWT
-    JWT(req.body, process.env.jwtSecret, (err, decoded) => {
+	var token = jwt.sign(process.env.jwtSecret, 'shhhhh');
+    JWT(req.body, token, (err, decoded) => {
 
         // verification error -> unauthorized request
         if (err) {
