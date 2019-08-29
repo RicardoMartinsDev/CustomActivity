@@ -11,6 +11,7 @@ var $ = jQuery = require('jquery')(window)*/
 // Deps
 const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
+logData(JWT);
 var util = require('util');
 var http = require('https');
 
