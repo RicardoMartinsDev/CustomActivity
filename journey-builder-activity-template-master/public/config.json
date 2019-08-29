@@ -33,6 +33,11 @@
           "verb": "POST",
         "useJwt": true
        },
+	   "execute": {
+        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
+          "verb": "POST",
+        "useJwt": true
+       },
        "publish": {
         "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/publish",
            "verb": "POST",
