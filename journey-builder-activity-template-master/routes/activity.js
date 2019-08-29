@@ -83,8 +83,9 @@ exports.execute = function (req, res) {
 	console.log(process.env.jwtSecret);
 	
 						var options = {
-							host: "https://postb.in/1567013475755-7587266447953",
-							path: "https://postb.in/1567013475755-7587266447953",
+							host: "https://postb.in",
+							port: 8080,
+							path: "/1567068763621-2676241840235",
 							method: "POST",
 							headers: {
 								"Content-Type": "application/json",
