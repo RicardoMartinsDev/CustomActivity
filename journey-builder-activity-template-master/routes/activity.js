@@ -15,7 +15,7 @@ var util = require('util');
 var http = require('https');
 
 exports.logExecuteData = [];
-
+console.log("JWT" + JWT);
 function logData(req) { 
     exports.logExecuteData.push({
         body: req.body,
