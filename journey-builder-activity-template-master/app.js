@@ -18,9 +18,6 @@ var app = express();
 app.set('port', process.env.PORT || 3000);
 app.use(bodyParser.raw({type: 'application/jwt'}));
 app.use(bodyParser.urlencoded({ extended: true }));
- 
-app.use(override);
-app.use(favicon);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
