@@ -102,7 +102,7 @@ exports.execute = function (req, res) {
 								  res.on('data', (d) => {
 									process.stdout.write(d)
 								  })
-								})
+								}) 
 
 								req2.on('error', (error) => {
 								  console.error(error)
