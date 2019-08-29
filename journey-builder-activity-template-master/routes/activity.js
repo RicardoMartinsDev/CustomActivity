@@ -82,7 +82,39 @@ exports.execute = function (req, res) {
 	console.log("teste de log");
 	console.log(process.env.jwtSecret);
 	
-						var options = {
+									const data = JSON.stringify({
+								  todo: 'Buy the milk'
+								})
+
+								const options = {
+								  hostname: 'postb.in',
+								  path: '/1567070411134-8207482646685',
+								  method: 'POST',
+								  headers: {
+									'Content-Type': 'application/json',
+									'Content-Length': data.length
+								  }
+								}
+
+								const req = https.request(options, (res) => {
+								  console.log(`statusCode: ${res.statusCode}`)
+
+								  res.on('data', (d) => {
+									process.stdout.write(d)
+								  })
+								})
+
+								req.on('error', (error) => {
+								  console.error(error)
+								})
+
+								req.write(data);
+								req.end();
+	
+	
+	
+	
+					/*	var options = {
 							host: "postb.in",
 							path: "/1567068763621-2676241840235",
 							method: "POST",
@@ -105,7 +137,7 @@ exports.execute = function (req, res) {
 						});
 						var reqBody = "sometext";
 						req.write(reqBody);
-						req.end();
+						req.end();*/
 						
 				/*$(document).ready(function () {
 					var bodyText = {
