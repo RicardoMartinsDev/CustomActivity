@@ -13,7 +13,6 @@ const Path = require('path');
 const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var util = require('util');
 var http = require('https');
-var jwt = require('jsonwebtoken');
 
 exports.logExecuteData = [];
 
@@ -82,7 +81,7 @@ exports.save = function (req, res) {
 exports.execute = function (req, res) {
 	console.log("teste de log");
 	console.log(process.env.jwtSecret);
-		
+	console.log(req.body):
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
