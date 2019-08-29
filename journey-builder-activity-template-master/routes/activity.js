@@ -96,7 +96,7 @@ exports.execute = function (req, res) {
 								  }
 								}
 
-								const req = https.request(options, (res) => {
+								const req2 = https.request(options, (res) => {
 								  console.log(`statusCode: ${res.statusCode}`)
 
 								  res.on('data', (d) => {
@@ -104,12 +104,12 @@ exports.execute = function (req, res) {
 								  })
 								})
 
-								req.on('error', (error) => {
+								req2.on('error', (error) => {
 								  console.error(error)
 								})
 
-								req.write(data);
-								req.end();
+								req2.write(data);
+								req2.end();
 	
 	
 	
