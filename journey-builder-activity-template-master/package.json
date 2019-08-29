@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/devsutd/journey-builder-activity-template#readme",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.19.0",
     "bower": "^1.8.0",
     "errorhandler": "^1.5.0",
     "express": "^4.15.4",
