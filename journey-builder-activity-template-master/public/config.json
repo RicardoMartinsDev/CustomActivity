@@ -16,14 +16,18 @@
     "arguments": {
         "execute": {
            "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.Hands_On.Email}}",
-					"nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
-					"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
-                }									
+				{"emailAddress": "{{Contact.Attribute.Hands_On.Email}}"},
+				{"nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}"},
+				{"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"}							
 			],
           "outArguments": [], 
-          "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute"
+          "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
+			"verb": "POST",
+			"body": "",
+			"header": "",
+			"format": "json",
+			"useJwt": false,
+			"timeout": 10000
         }
     },
     "configurationArguments": {
