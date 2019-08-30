@@ -23,7 +23,7 @@
           "outArguments": [], 
           "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
 			"verb": "POST",
-			"body": "",
+			"body": "{teste-wedidit}",
 			"header": "",
 			"format": "json",
 			"useJwt": false,
