@@ -22,13 +22,7 @@
 					"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
                 }									
 			],
-          "outArguments": [
-				{
-                    "emailAddress": "{{Contact.Attribute.Hands_On.Email}}",
-					"nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
-					"apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
-                }
-		  ], 
+          "outArguments": [], 
           "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute"
         }
     },
@@ -36,11 +30,6 @@
       "applicationExtensionKey": "e0e2b402-17b9-4b4c-add0-61b614f4ac72",
       "save": {
         "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/save",
-          "verb": "POST",
-        "useJwt": true
-       },
-	   "execute": {
-        "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
           "verb": "POST",
         "useJwt": true
        },
