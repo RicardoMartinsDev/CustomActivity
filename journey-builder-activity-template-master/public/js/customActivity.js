@@ -138,11 +138,11 @@ define([
         payload.name = name;
 
         payload['arguments'].execute.inArguments = [{ 
-		
+				"Email": argumentos
 			/*"Email": "{{Contact.Attribute.Hands_On.Email}}",
 			"Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
 			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"	*/
-			argumentos
+
 			
 		}];
 			
