@@ -1,7 +1,6 @@
 'use strict';
 
 module.exports = (body, secret, cb) => {
-	console.log(secret);
 	if (!body) {
 		return cb(new Error('invalid jwtdata'));
 	}
