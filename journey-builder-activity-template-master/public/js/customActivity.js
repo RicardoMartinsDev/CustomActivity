@@ -138,9 +138,9 @@ define([
         payload.name = name;
 
         payload['arguments'].execute.inArguments = [{ 
-			"Email": "{{Contact.Attribute.Hands_On.Email}}",
-			"Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
-			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"	
+			{"Email": "{{Contact.Attribute.Hands_On.Email}}"},
+			{"Primeiro_Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}"},
+			{"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"}	
 
 			
 		}];
