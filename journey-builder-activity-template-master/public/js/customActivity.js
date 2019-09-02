@@ -45,7 +45,7 @@ define([
 
         $.each(inArguments, function (index, inArgument) {
             $.each(inArgument, function (key, val) {
-                argumentos = val            
+				
             });
         });
 
@@ -129,7 +129,6 @@ define([
 
     function save() {
       var name = 'API MARTINS';
-        var value = getMessage();
 
         // 'payload' is initialized on 'initActivity' above.
         // Journey Builder sends an initial payload with defaults
@@ -138,6 +137,7 @@ define([
         payload.name = name;
 
         payload['arguments'].execute.inArguments = [{
+			"Identifier": "{{Contact.Key}}",
 			"Email": "{{Contact.Attribute.Hands_On.Email}}",
 			"Primeiro_Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
 			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
@@ -146,10 +146,6 @@ define([
         payload['metaData'].isConfigured = true;
 
         connection.trigger('updateActivity', payload);
-    }
-
-    function getMessage() {
-        return 'example';
     }
 
 
