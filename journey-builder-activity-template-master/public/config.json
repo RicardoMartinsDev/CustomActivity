@@ -15,12 +15,8 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[{
-		   "Email": "{{Contact.Attribute.Hands_On.Email}}",
-			"Primeiro_Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
-			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
-			}],
-          "outArguments": [{"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"}], 
+           "inArguments":[],
+          "outArguments": [], 
           "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
 			"verb": "POST",
 			"body": "",
