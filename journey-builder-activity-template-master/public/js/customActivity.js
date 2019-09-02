@@ -105,7 +105,17 @@ define([
         // may be overridden as desired.
         payload.name = name;
 
-        payload['arguments'].execute.inArguments = [{ "message": value }];
+        payload['arguments'].execute.inArguments = [{ 
+		
+			"Email": "{{Contact.Attribute.Hands_On.Email}}",
+			"Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
+			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"	
+			
+		}];
+			
+		
+
+
 
         payload['metaData'].isConfigured = true;
 

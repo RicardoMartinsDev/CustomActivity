@@ -76,7 +76,7 @@ exports.execute = function (req, res) {
 	console.log("teste de log");
 	console.log(process.env.jwtSecret);
 	logData(req);
-	console.log("LOG OF BODY: " + req.body);
+	console.log("LOG OF BODY: " + util.inspect(req.body));
     // example on how to decode JWT
     JWT(req.body, process.env.jwtSecret, (err, decoded) => {
 
