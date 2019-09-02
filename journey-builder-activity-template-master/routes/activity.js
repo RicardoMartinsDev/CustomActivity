@@ -93,7 +93,7 @@ exports.execute = function (req, res) {
 			
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             console.log("entrou no if dos argumentos");
-			console.log("ARGUMENT -> " + decoded.inArguments[0]);
+			console.log("ARGUMENT -> " + String(decoded.inArguments[0]));
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
