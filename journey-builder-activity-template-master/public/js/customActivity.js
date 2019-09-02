@@ -8,6 +8,7 @@ define([
     var connection = new Postmonger.Session();
     var authTokens = {};
     var payload = {};
+	var argumentos;
     $(window).ready(onRender);
 
     connection.on('initActivity', initialize);
@@ -25,7 +26,39 @@ define([
     }
 
     function initialize(data) {
-        console.log(data);
+		
+		console.log(data);
+        if (data) {
+            payload = data;
+        }
+        
+        var hasInArguments = Boolean(
+            payload['arguments'] &&
+            payload['arguments'].execute &&
+            payload['arguments'].execute.inArguments &&
+            payload['arguments'].execute.inArguments.length > 0
+        );
+
+        var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
+
+        console.log(inArguments);
+
+        $.each(inArguments, function (index, inArgument) {
+            $.each(inArgument, function (key, val) {
+                argumentos = key +  ":" + value;             
+            });
+        });
+
+        connection.trigger('updateButton', {
+            button: 'next',
+            text: 'done',
+            visible: true
+        });
+    }
+		
+		
+		
+        /*console.log(data);
         if (data) {
             payload = data;
         }
@@ -82,8 +115,7 @@ define([
             button: 'next',
             text: 'done',
             visible: true
-        });
-    }
+        });*/
 
     function onGetTokens(tokens) {
         console.log(tokens);
@@ -107,16 +139,13 @@ define([
 
         payload['arguments'].execute.inArguments = [{ 
 		
-			"Email": "{{Contact.Attribute.Hands_On.Email}}",
+			/*"Email": "{{Contact.Attribute.Hands_On.Email}}",
 			"Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}",
-			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"	
+			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"	*/
+			argumentos
 			
 		}];
 			
-		
-
-
-
         payload['metaData'].isConfigured = true;
 
         connection.trigger('updateActivity', payload);
