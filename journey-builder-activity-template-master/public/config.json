@@ -20,7 +20,7 @@
 				{"Primeiro_Nome": "{{Contact.Attribute.Hands_On.Primeiro_Nome}}"},
 				{"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"}							
 			],
-          "outArguments": [], 
+          "outArguments": [{"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"}], 
           "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/execute",
 			"verb": "POST",
 			"body": "",
