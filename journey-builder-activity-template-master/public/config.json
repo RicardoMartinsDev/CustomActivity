@@ -38,7 +38,7 @@
       "save": {
         "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/save",
           "verb": "POST",
-        "useJwt": true
+        "useJwt": true 
        },
        "publish": {
         "url": "https://customactivity-apiconnection.herokuapp.com/journeybuilder/publish",
