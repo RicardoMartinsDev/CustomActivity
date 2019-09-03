@@ -139,7 +139,7 @@ define([
         payload['arguments'].execute.inArguments = [{
 			"Identifier": "{{Contact.Key}}",
 			"Email": '{{InteractionDefaults.Email}}',
-			"Primeiro_Nome": "{{InteractionDefaults.Primeiro_Nome}}",
+			"Primeiro_Nome": "{{Contact.Attribute.Primeiro_Nome}}",
 			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
 		}];
 			
