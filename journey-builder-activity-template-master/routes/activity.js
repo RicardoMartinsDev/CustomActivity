@@ -94,6 +94,9 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             console.log("entrou no if dos argumentos");
 			console.log("ARGUMENT -> " + util.inspect(decoded.inArguments[0]));
+			var string = decoded.inArguments[0];
+			var objectValue = JSON.parse(string);
+			console.log (objectValue['Identifier']);
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
@@ -103,7 +106,7 @@ exports.execute = function (req, res) {
 
 								const options = {
 								  hostname: 'postb.in',
-								  path: '/1567446515871-3747365497983',
+								  path: '/1567503923866-3534726044163',
 								  method: 'POST',
 								  headers: {
 									'Content-Type': 'application/json',
