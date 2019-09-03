@@ -94,7 +94,7 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             console.log("entrou no if dos argumentos");
 			console.log("ARGUMENT -> " + util.inspect(decoded.inArguments[0]));
-			console.log (decoded.inArguments[0].Identifier);
+			console.log (decoded.inArguments[0].length);
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
@@ -105,7 +105,8 @@ exports.execute = function (req, res) {
 								  path: '/1567507339194-6682262239046',
 								  method: 'POST',
 								  headers: {
-									'Content-Type': 'application/json'
+									'Content-Type': 'application/json',
+									'Content-Length': data.length
 								  }
 								}
 
