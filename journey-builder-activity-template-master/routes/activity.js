@@ -119,6 +119,7 @@ exports.execute = function (req, res) {
 								  res2.on('data', (d) => {
 									process.stdout.write(d)
 								  })
+								  res2.end()
 								}) 
 
 								req2.on('error', (error) => {
@@ -129,7 +130,6 @@ exports.execute = function (req, res) {
 								req2.end();
             logData(req);
 			res.status(200).send('Execute');
-			res.end();
         } else {
             console.error('inArguments invalid.');
             return res.status(400).end();
