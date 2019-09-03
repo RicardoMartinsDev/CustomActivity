@@ -103,7 +103,7 @@ exports.execute = function (req, res) {
 
 								const options = {
 								  hostname: 'postb.in',
-								  path: '/1567521585639-7252233969047',
+								  path: process.env.Bin,
 								  method: 'POST',
 								  headers: {
 									'Content-Type': 'application/json',
