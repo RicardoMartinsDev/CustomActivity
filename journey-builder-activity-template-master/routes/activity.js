@@ -107,15 +107,16 @@ exports.execute = function (req, res) {
 								  path: '/1567501688254-0890317209996',
 								  method: 'POST',
 								  headers: {
-									//'Content-Length': data.length,
 									'Content-Type': 'application/json'
+									//'Content-Length': data.length
+									
 								  }
 								}
 
-								const req2 = http.request(options, (res) => {
+								const req2 = http.request(options, (res2) => {
 								  console.log('statusCode: ${res.statusCode}')
 
-								  res.on('data', (d) => {
+								  res2.on('data', (d) => {
 									process.stdout.write(d)
 								  })
 								}) 
