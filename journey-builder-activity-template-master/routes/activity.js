@@ -97,29 +97,26 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
-								const data = decodedArgs
-								/*JSON.stringify({
-								  util.inspect(decodedArgs)
-								})*/
+								const data = JSON.stringify({
+								  decodedArgs
+								})
 
 								const options = {
 								  hostname: 'postb.in',
-								  path: '/1567503923866-3534726044163',
+								  path: '/1567446515871-3747365497983',
 								  method: 'POST',
 								  headers: {
-									'Content-Type': 'application/json'
-									//'Content-Length': data.length
-									
+									'Content-Type': 'application/json',
+									'Content-Length': data.length
 								  }
 								}
 
-								const req2 = http.request(options, (res2) => {
+								const req2 = http.request(options, (res) => {
 								  console.log('statusCode: ${res.statusCode}')
 
-								  res2.on('data', (d) => {
+								  res.on('data', (d) => {
 									process.stdout.write(d)
 								  })
-								  res2.end()
 								}) 
 
 								req2.on('error', (error) => {
