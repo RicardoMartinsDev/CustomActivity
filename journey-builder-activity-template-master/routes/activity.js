@@ -98,12 +98,12 @@ exports.execute = function (req, res) {
             var decodedArgs = decoded.inArguments[0];
             
 								const data = JSON.stringify({
-								  decodedArgs
+								  util.inspect(decoded.inArguments[0])
 								})
 
 								const options = {
 								  hostname: 'postb.in',
-								  path: '/1567446515871-3747365497983',
+								  path: '/1567498728293-4253154245670',
 								  method: 'POST',
 								  headers: {
 									'Content-Type': 'application/json',
