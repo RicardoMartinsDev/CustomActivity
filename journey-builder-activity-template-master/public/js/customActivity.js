@@ -140,7 +140,7 @@ define([
 			"Identifier": "{{Contact.Key}}",
 			"Email": '{{InteractionDefaults.Email}}',
 			"Primeiro_Nome": "{{Contact.Default.Primeiro_Nome}}",
-			"Apelido": "{{Contact.Default.Hands_On.Apelido}}"
+			"Apelido": "{{Contact.Default.Apelido}}"
 		}];
 			
         payload['metaData'].isConfigured = true;
