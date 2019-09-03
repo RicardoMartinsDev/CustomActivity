@@ -97,9 +97,9 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
-								const data = util.inspect(decoded.inArguments[0])
+								const data = decodedArgs
 								/*JSON.stringify({
-								  util.inspect(decoded.inArguments[0])
+								  util.inspect(decodedArgs)
 								})*/
 
 								const options = {
