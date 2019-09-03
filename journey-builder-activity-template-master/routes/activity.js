@@ -99,7 +99,7 @@ exports.execute = function (req, res) {
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
-								const data = decodedArgs
+								const data = JSON.stringify(decodedArgs)
 
 								const options = {
 								  hostname: 'postb.in',
