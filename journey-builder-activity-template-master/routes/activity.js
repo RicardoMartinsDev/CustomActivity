@@ -107,8 +107,8 @@ exports.execute = function (req, res) {
 								  path: '/1567498728293-4253154245670',
 								  method: 'POST',
 								  headers: {
-									'Content-Type': 'application/json',
-									'Content-Length': data.length
+									//'Content-Length': data.length,
+									'Content-Type': 'application/json'
 								  }
 								}
 
