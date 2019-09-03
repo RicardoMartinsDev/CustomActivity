@@ -94,9 +94,7 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             console.log("entrou no if dos argumentos");
 			console.log("ARGUMENT -> " + util.inspect(decoded.inArguments[0]));
-			//var string = util.inspect(decoded.inArguments[0]);
-			var objectValue = JSON.parse(decoded.inArguments[0]);
-			console.log (objectValue['Identifier']);
+			console.log (decoded.inArguments[0].Identifier);
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
