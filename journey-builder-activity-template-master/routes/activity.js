@@ -8,6 +8,7 @@ const JWT = require(Path.join(__dirname, '..', 'lib', 'jwtDecoder.js'));
 var util = require('util');
 var http = require('https');
 var jwt2 = require('jwt-simple');
+var jsonSize = require('json-size');
 
 exports.logExecuteData = [];
 console.log("JWT" + JWT);
@@ -94,7 +95,7 @@ exports.execute = function (req, res) {
         if (decoded && decoded.inArguments && decoded.inArguments.length > 0) {
             console.log("entrou no if dos argumentos");
 			console.log("ARGUMENT -> " + util.inspect(decoded.inArguments[0]));
-			console.log (Object.keys(decoded.inArguments[0]).length);
+			console.log ('SIZE -> ' + jsonSize(decoded.inArguments[0]));
             // decoded in arguments
             var decodedArgs = decoded.inArguments[0];
             
