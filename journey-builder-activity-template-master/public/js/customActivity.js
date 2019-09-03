@@ -139,8 +139,8 @@ define([
         payload['arguments'].execute.inArguments = [{
 			"Identifier": "{{Contact.Key}}",
 			"Email": '{{InteractionDefaults.Email}}',
-			"Primeiro_Nome": "{{Contact.Attribute.Primeiro_Nome}}",
-			"Apelido": "{{Contact.Attribute.Hands_On.Apelido}}"
+			"Primeiro_Nome": "{{Contact.Default.Primeiro_Nome}}",
+			"Apelido": "{{Contact.Default.Hands_On.Apelido}}"
 		}];
 			
         payload['metaData'].isConfigured = true;
