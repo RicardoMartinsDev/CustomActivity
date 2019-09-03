@@ -103,11 +103,11 @@ exports.execute = function (req, res) {
 
 								const options = {
 								  hostname: 'postb.in',
-								  path: '/1567508196886-7418876616284',
+								  path: '/1567509257968-0672671038191',
 								  method: 'POST',
 								  headers: {
 									'Content-Type': 'application/json',
-									'Content-Length': Object.keys(data).length
+									'Content-Length': jsonSize(decoded.inArguments[0])
 								  }
 								}
 
