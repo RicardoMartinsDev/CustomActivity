@@ -11,8 +11,15 @@ define([
     var argumentos;
     $(window).ready(onRender);
     var eventDefinitionKey;
-    connection.trigger('requestTriggerEventDefinition');
+    
 
+    
+
+    connection.on('initActivity', initialize);
+    connection.on('requestedTokens', onGetTokens);
+    connection.on('requestedEndpoints', onGetEndpoints);
+
+    connection.on('clickedNext', save);
     connection.on('requestedTriggerEventDefinition',
         function (eventDefinitionModel) {
             console.log('DEFINITION-> ' + eventDefinitionModel);
@@ -26,19 +33,12 @@ define([
             }
 
         });
-
-    connection.on('initActivity', initialize);
-    connection.on('requestedTokens', onGetTokens);
-    connection.on('requestedEndpoints', onGetEndpoints);
-
-    connection.on('clickedNext', save);
-
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
-
+        connection.trigger('requestTriggerEventDefinition');
     }
 
     function initialize(data) {
