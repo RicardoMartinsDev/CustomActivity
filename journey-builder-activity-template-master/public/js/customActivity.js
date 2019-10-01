@@ -94,7 +94,7 @@ define([
         payload['arguments'].execute.inArguments = [{
             "Identifier": "{{Contact.Key}}",
             "Email": '{{InteractionDefaults.Email}}',
-            "Password": "{{Contact.Attribute."+eventDefinitionKey +".Password}}"
+            "Password": "{{Event.DEAudience-36dae71b-8f4b-36be-fb3f-743440f9e1d6.User}}"
         }];
 
         payload['metaData'].isConfigured = true;
