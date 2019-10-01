@@ -72,67 +72,6 @@ define([
         });
     }
 
-
-
-    /*console.log(data);
-    if (data) {
-        payload = data;
-    }
-    
-    var hasInArguments = Boolean(
-        payload['arguments'] &&
-        payload['arguments'].execute &&
-        payload['arguments'].execute.inArguments &&
-        payload['arguments'].execute.inArguments.length > 0
-    );
-
-    var inArguments = hasInArguments ? payload['arguments'].execute.inArguments : {};
-
-    console.log(inArguments);
-
-    $.each(inArguments, function (index, inArgument) {
-        var variaveis;
-        $.each(inArgument, function (key, val) {
-            variaveis = variaveis + val; 
-        	
-        });
-    	
-    var bodyText = {
-    "grant_type":"client_credentials",
-    "client_id":"cfly1ym6xx6y34jbqw0idypq",
-    "client_secret":"FXaTXByn5UyO7r1equQ8OwxU",
-    "variaveis" : variaveis
-    };
-    var $j = jQuery.noConflict();
-    var token;
-    $j.support.cors = true;
-    $j.ajax({
-    type: "POST",
-    url: process.env.postURL,
-    headers: {
-        'Origin' : process.env.postURL,
-        'Access-Control-Allow-Headers' : 'Content-Type, Authorization, Content-Length, X-Requested-With',
-        'Access-Control-Allow-Origin' : '*',
-        'Access-Control-Allow-Methods' : 'GET, POST, PUT',
-        'Content-Type': 'application/json'
-    },
-    crossDomain: true,
-    data: JSON.stringify(bodyText),
-    dataType: 'json',
-    success: function(responseData, status, xhr) {
-        console.log(responseData);
-    },
-    error: function(request, status, error) {
-        console.log(request.responseText);
-    }});
-         
-    });
-    connection.trigger('updateButton', {
-        button: 'next',
-        text: 'done',
-        visible: true
-    });*/
-
     function onGetTokens(tokens) {
         console.log(tokens);
         authTokens = tokens;
